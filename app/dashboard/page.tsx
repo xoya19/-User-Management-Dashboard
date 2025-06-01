@@ -25,7 +25,7 @@ export default function Dashboard() {
         if (!res.ok) throw new Error('Failed to fetch');
         const data: User[] = await res.json();
         setUsers(data);
-      } catch (err) {
+      } catch {
         setError('Error loading users');
       } finally {
         setLoading(false);
@@ -77,4 +77,3 @@ export default function Dashboard() {
     </main>
   );
 }
-
